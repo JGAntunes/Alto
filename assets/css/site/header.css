@@ -40,6 +40,7 @@
 }
 
 .logo-text {
+    color: var(--primary-color);
     font-size: 24px;
     font-weight: 800;
 }
@@ -67,6 +68,16 @@
 .menu-item {
     margin: 0 20px;
     font-size: 14px;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    transition: opacity 0.3s var(--animation-base);
+    backface-visibility: hidden;
+}
+
+.menu-item-social {
+    margin: 0 10px;
+    font-size: 18px;
     line-height: 1;
     font-weight: 800;
     letter-spacing: 0.5px;

@@ -1,6 +1,26 @@
-<ul class="nav-list u-plain-list">
-    {{#foreach navigation}}
-        <li class="menu-item menu-item-{{slug}}{{#if current}} menu-item-current{{/if}}"><a class="menu-item-link"
-                href="{{url absolute="true"}}">{{label}}</a></li>
-    {{/foreach}}
-</ul>
+{{#if isSecondary}}
+    <ul class="nav-list header-social u-plain-list">
+        {{#foreach navigation}}
+            <li class="menu-item-social menu-item-social-{{slug}} ">
+                <a class="menu-item-social-link menu-item-social-link-{{slug}}" href="{{url absolute="true"}}"
+                target="_blank" rel="noopener noreferrer" aria-label="{{slug}}">
+                    <i class="icon icon-{{slug}}"></i>
+                </a>
+            </li>
+        {{/foreach}}
+        <li class="menu-item-social menu-item-social-rss ">
+            <a class="menu-item-social-link menu-item-social-link-rss"
+                href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" target="_blank" rel="noopener noreferrer"
+                aria-label="RSS">
+                <i class="icon icon-rss"></i>
+            </a>
+        </li>
+    </ul>
+{{else}}
+    <ul class="nav-list u-plain-list">
+        {{#foreach navigation}}
+            <li class="menu-item menu-item-{{slug}}{{#if current}} menu-item-current{{/if}}"><a class="menu-item-link"
+                    href="{{url absolute="true"}}">{{label}}</a></li>
+        {{/foreach}}
+    </ul>
+{{/if}}

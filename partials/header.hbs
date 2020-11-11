@@ -11,6 +11,11 @@
             {{/if}}
         </div>
         <div class="navbar-right">
+            {{#if @site.secondary_navigation}}
+                <nav class="main-menu">
+                    {{navigation type="secondary"}}
+                </nav>
+            {{/if}}
             <div class="toggle-track">
                 <div class="toggle-moon"><i class="icon icon-brightness-2"></i></div>
                 <div class="toggle-sun"><i class="icon icon-white-balance-sunny"></i></div>

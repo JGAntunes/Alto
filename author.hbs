@@ -17,7 +17,9 @@
         {{/author}}
         <div class="post-feed">
             {{#foreach posts visibility="all"}}
-                {{> "loop"}}
+                {{#has tag="aboutme"}}
+                    {{> "loop"}}
+                {{/has}}
             {{/foreach}}
         </div>
         {{pagination}}
